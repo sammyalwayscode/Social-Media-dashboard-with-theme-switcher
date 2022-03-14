@@ -38,7 +38,7 @@ export default TopStart;
 
 const Container = styled.div`
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: ${(props) => props.theme.pageBackground};
   display: flex;
   justify-content: center;
