@@ -1,18 +1,17 @@
 import React from "react";
-import { BsFacebook } from "react-icons/bs";
 import styled from "styled-components";
 
-const OverviewCard = () => {
+const OverviewCard = (props) => {
   return (
     <Container>
       <Wrapper>
         <Top>
-          <Txt>Likes</Txt>
-          <BsFacebook />
+          <Txt>{props.likeText}</Txt>
+          {props.IconType}
         </Top>
         <Buttom>
-          <Numm>52</Numm>
-          <Cent>2%</Cent>
+          <Numm>{props.nummm}</Numm>
+          <Cent>{props.percent}%</Cent>
         </Buttom>
       </Wrapper>
     </Container>
@@ -30,6 +29,7 @@ const Container = styled.div`
   align-items: center;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
+  border-radius: 4px;
 `;
 const Wrapper = styled.div`
   width: 85%;
@@ -61,4 +61,5 @@ const Numm = styled.div`
 const Cent = styled.div`
   font-size: 10px;
   color: green;
+  font-weight: 600;
 `;
